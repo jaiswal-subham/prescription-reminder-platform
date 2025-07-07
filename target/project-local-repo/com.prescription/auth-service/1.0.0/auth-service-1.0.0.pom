@@ -10,6 +10,7 @@
 		<groupId>com.prescription</groupId>
 		<artifactId>prescription-reminder-platform</artifactId>
 		<version>1.0.0</version>
+		<relativePath>../pom.xml</relativePath> <!-- 👈 Fixes the issue -->
 	</parent>
 
 	<artifactId>auth-service</artifactId>

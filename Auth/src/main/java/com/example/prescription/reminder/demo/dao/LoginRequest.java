@@ -2,7 +2,6 @@ package com.example.prescription.reminder.demo.dao;
 
 import com.example.prescription.reminder.demo.utilities.ConstantsValues;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
