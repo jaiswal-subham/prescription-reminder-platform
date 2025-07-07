@@ -29,6 +29,7 @@ public class AuthController {
         return new ResponseEntity<LoginResponse>(new LoginResponse(login), HttpStatus.OK);
     }
 
+
     @PostMapping(ConstantsValues.registerRoute)
     ResponseEntity<RegisterResponse> register(@Valid @RequestBody RegisterRequest registerRequest){
         String registration  =  this.userService.register(registerRequest);
@@ -36,8 +37,6 @@ public class AuthController {
         if(registration.equals(ConstantsValues.registrationFailed)) return new ResponseEntity<RegisterResponse>(new RegisterResponse(registration), HttpStatus.EXPECTATION_FAILED);
         return new ResponseEntity<RegisterResponse>(new RegisterResponse(registration), HttpStatus.CREATED);
     }
-
-
 
 
 }

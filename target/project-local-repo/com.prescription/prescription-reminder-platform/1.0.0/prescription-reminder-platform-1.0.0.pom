@@ -25,10 +25,11 @@
 
     <modules>
         <module>Auth</module>
+        <module>PrescriptionCrud</module>
     </modules>
 
     <properties>
-        <java.version>17</java.version>
+        <java.version>22</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <spring-boot.version>3.2.5</spring-boot.version>

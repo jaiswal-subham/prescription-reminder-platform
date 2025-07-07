@@ -1,5 +1,6 @@
+package com.example.demo.service;
+
 // JwtService.java
-package com.example.prescription.reminder.demo.service;
 
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
@@ -34,15 +35,17 @@ public class JwtService {
                 .toList();
 
         redisTemplate.opsForValue().set(
-                "user-last-valid-token:" + username,now);
+                "user-last-valid-token:" + username,now.getTime()+1000); // To address Redis saving latency
 
-        return Jwts.builder()
+        var x =  Jwts.builder()
                 .setSubject(username)
                 .setIssuedAt(now)
                 .setExpiration(expiryDate)
                 .claim("roles", roleNames)
                 .signWith(getSignKey(), SignatureAlgorithm.HS256)
                 .compact();
+
+        return  x;
     }
     public String extractUsername(String token) {
         return extractAllClaims(token).getSubject();
@@ -66,8 +69,16 @@ public class JwtService {
     }
 
     public boolean isTokenStillValid(String username, Date issuedAt) {
-        Long lastValidTime = (Long) redisTemplate.opsForValue().get("user-last-valid-token:" + username);
-        return lastValidTime == null || issuedAt.getTime() >= lastValidTime;
+        Object raw = redisTemplate.opsForValue().get("user-last-valid-token:" + username);
+
+        if (raw instanceof List<?> list && list.size() == 2 && list.get(1) instanceof Number ts) {
+            Long lastValidTime = ts.longValue();
+            return issuedAt.getTime() >= lastValidTime;
+        } else if (raw instanceof Long lastValidTime) {
+            return issuedAt.getTime() >= lastValidTime;
+        }
+        return true;
+
     }
 
     private Claims extractAllClaims(String token) {

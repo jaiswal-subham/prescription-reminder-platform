@@ -34,9 +34,8 @@ public class WebSecurityConfiguration {
                                 .requestMatchers(ConstantsValues.loginRoute).permitAll()
                                 .requestMatchers(ConstantsValues.registerRoute).permitAll()
                                 .requestMatchers(ConstantsValues.userGenericRoute).authenticated()
-
                 )
-                .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
+               .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
     }
 

@@ -1,6 +1,7 @@
-package com.example.prescription.reminder.demo.filter;
+package com.example.demo.filter;
 
-import com.example.prescription.reminder.demo.service.JwtService;
+
+import com.example.demo.service.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

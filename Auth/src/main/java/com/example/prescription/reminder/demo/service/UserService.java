@@ -9,10 +9,13 @@ import com.example.prescription.reminder.demo.utilities.ConstantsValues;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -42,21 +45,17 @@ public class UserService {
 
 
     public String login(LoginRequest loginRequest){
-
-
         Authentication authenticate = this.authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(loginRequest.getUsername(), loginRequest.getPassword()));
         if(authenticate.isAuthenticated()){
 
-            return jwtService.generateToken(loginRequest.getUsername());
+            List<GrantedAuthority> authorities = (List<GrantedAuthority>) authenticate.getAuthorities();
+            return jwtService.generateToken(loginRequest.getUsername(),authorities);
         }   return  ConstantsValues.loginFailed;
-
     }
 
     public String register(RegisterRequest registerRequest){
-
         String encryptedPassword = new BCryptPasswordEncoder().encode(registerRequest.getPassword());
        UserEntity userEntity = new UserEntity(registerRequest.getUsername(),encryptedPassword,registerRequest.getEmailId(),registerRequest.getFirstName(),registerRequest.getLastName());
-
        try{
            this.userRepo.save(userEntity);
            return ConstantsValues.success;
@@ -64,8 +63,6 @@ public class UserService {
        catch (Exception e){
            throw  e;
        }
-
     }
-
 }
 

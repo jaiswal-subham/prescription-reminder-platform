@@ -18,15 +18,12 @@ public class UserDetail implements UserDetailsService {
 
     UserRepo userRepo;
 
-
     public UserDetail(UserRepo userRepo) {
         this.userRepo = userRepo;
     }
 
     public User loadUserByUsername(String username) {
-
         Optional<UserEntity> userEntityOptional = userRepo.findByUsername(username);
-
         if(userEntityOptional.isPresent()){
             UserEntity userEntity = userEntityOptional.get();
             List<GrantedAuthority> roles = new ArrayList<GrantedAuthority>();
@@ -35,8 +32,5 @@ public class UserDetail implements UserDetailsService {
         }else {
             throw new UsernameNotFoundException(ConstantsValues.userNotFoundErrorMessage + username);
         }
-
     }
-
-
 }
