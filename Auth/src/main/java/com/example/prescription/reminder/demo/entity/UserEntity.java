@@ -2,14 +2,22 @@ package com.example.prescription.reminder.demo.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.GenericGenerator;
+
+import java.util.UUID;
 
 @Data
 @Entity
 @Table(name="user")
 public class UserEntity {
+
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
+    @GeneratedValue(generator = "uuid")  // 👈 tie it to custom generator
+    @GenericGenerator(name = "uuid", strategy = "uuid2")  // 👈 generate a random UUID
+    @Column(name = "id", updatable = false, nullable = false, length = 36)
+    private String id;
+
 
     @Column(nullable = false,unique = true)
     String username;

@@ -28,7 +28,7 @@ public class UserDetail implements UserDetailsService {
             UserEntity userEntity = userEntityOptional.get();
             List<GrantedAuthority> roles = new ArrayList<GrantedAuthority>();
             roles.add(new SimpleGrantedAuthority(ConstantsValues.userRole));
-            return new User(userEntity.getUsername(), userEntity.getPassword(),roles);
+            return new CustomUser(userEntity.getUsername(), userEntity.getPassword(),roles,userEntity.getId());
         }else {
             throw new UsernameNotFoundException(ConstantsValues.userNotFoundErrorMessage + username);
         }
