@@ -4,35 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="257c634f-803c-44a1-9a54-6e2e20309e57" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/configuration/RedisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/configuration/RedisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/configuration/WebSecurityConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/controller/PrescriptionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/filter/JwtFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/service/JwtService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/utilities/ConstantsValues.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/easycode.ignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/pom.xml" afterDir="false" />
+    <list default="true" id="257c634f-803c-44a1-9a54-6e2e20309e57" name="Changes" comment="login with redis instance for blacklisting token, Microservice architecture and added auth to a next project">
+      <change afterPath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/configuration/CustomUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/configuration/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/configuration/RedisConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/configuration/UserDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/configuration/UserDetail.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/configuration/WebSecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/configuration/WebSecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/filter/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/filter/JwtFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/entity/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/repos/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/repos/UserRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/service/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/service/JwtService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auth/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-local-repo/com.prescription/auth-service/1.0.0/auth-service-1.0.0-consumer.pom" beforeDir="false" afterPath="$PROJECT_DIR$/target/project-local-repo/com.prescription/auth-service/1.0.0/auth-service-1.0.0-consumer.pom" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-local-repo/com.prescription/auth-service/1.0.0/auth-service-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/project-local-repo/com.prescription/auth-service/1.0.0/auth-service-1.0.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-local-repo/com.prescription/auth-service/1.0.0/auth-service-1.0.0.pom" beforeDir="false" afterPath="$PROJECT_DIR$/target/project-local-repo/com.prescription/auth-service/1.0.0/auth-service-1.0.0.pom" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-local-repo/com.prescription/prescription-reminder-platform/1.0.0/prescription-reminder-platform-1.0.0-consumer.pom" beforeDir="false" afterPath="$PROJECT_DIR$/target/project-local-repo/com.prescription/prescription-reminder-platform/1.0.0/prescription-reminder-platform-1.0.0-consumer.pom" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-local-repo/com.prescription/prescription-reminder-platform/1.0.0/prescription-reminder-platform-1.0.0.pom" beforeDir="false" afterPath="$PROJECT_DIR$/target/project-local-repo/com.prescription/prescription-reminder-platform/1.0.0/prescription-reminder-platform-1.0.0.pom" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,13 +64,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.DemoApplication.executor": "Run",
+    "Application.DemoApplication.executor": "Debug",
     "Application.PrescriptionCrudApplication.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Prescription Reminders/Prescription-Reminder-Platform",
+    "last_opened_file_path": "D:/Library-center-app",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.4",
@@ -139,35 +120,35 @@
       <option name="presentableId" value="Default" />
       <updated>1751878874510</updated>
     </task>
+    <task id="LOCAL-00001" summary="login with redis instance for blacklisting token, Microservice architecture and added auth to a next project">
+      <option name="closed" value="true" />
+      <created>1751901725712</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1751901725713</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="login with redis instance for blacklisting token, Microservice architecture and added auth to a next project" />
+    <option name="LAST_COMMIT_MESSAGE" value="login with redis instance for blacklisting token, Microservice architecture and added auth to a next project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/configuration/WebSecurityConfiguration.java</url>
-          <line>22</line>
-          <properties class="com.example.prescription.reminder.demo.configuration.WebSecurityConfiguration" method="&lt;init&gt;">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/service/JwtService.java</url>
-          <line>63</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/service/JwtService.java</url>
-          <line>64</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/filter/JwtFilter.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/filter/JwtFilter.java</url>
           <line>57</line>
@@ -175,25 +156,50 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/filter/JwtFilter.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/filter/JwtFilter.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/filter/JwtFilter.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="19" />
+          <line>39</line>
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/filter/JwtFilter.java</url>
           <line>41</line>
-          <option name="timeStamp" value="23" />
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/filter/JwtFilter.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/filter/JwtFilter.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/filter/JwtFilter.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/filter/JwtFilter.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/service/JwtService.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/service/JwtService.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="e" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

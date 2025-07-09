@@ -26,27 +26,27 @@ public class JwtService {
         return Keys.hmacShaKeyFor(SECRET.getBytes());
     }
 
-    public String generateToken(String username, List<GrantedAuthority> roles) {
-        Date now = new Date();
-        Date expiryDate = new Date(now.getTime() + 1000 * 60 * 15); // 15 minutes
-
-        List<String> roleNames = roles.stream()
-                .map(GrantedAuthority::getAuthority)
-                .toList();
-
-        redisTemplate.opsForValue().set(
-                "user-last-valid-token:" + username,now.getTime()+1000); // To address Redis saving latency
-
-        var x =  Jwts.builder()
-                .setSubject(username)
-                .setIssuedAt(now)
-                .setExpiration(expiryDate)
-                .claim("roles", roleNames)
-                .signWith(getSignKey(), SignatureAlgorithm.HS256)
-                .compact();
-
-        return  x;
-    }
+//    public String generateToken(String username, List<GrantedAuthority> roles) {
+//        Date now = new Date();
+//        Date expiryDate = new Date(now.getTime() + 1000 * 60 * 15); // 15 minutes
+//
+//        List<String> roleNames = roles.stream()
+//                .map(GrantedAuthority::getAuthority)
+//                .toList();
+//
+//        redisTemplate.opsForValue().set(
+//                "user-last-valid-token:" + username,now.getTime()+1000); // To address Redis saving latency
+//
+//        var x =  Jwts.builder()
+//                .setSubject(username)
+//                .setIssuedAt(now)
+//                .setExpiration(expiryDate)
+//                .claim("roles", roleNames)
+//                .signWith(getSignKey(), SignatureAlgorithm.HS256)
+//                .compact();
+//
+//        return  x;
+//    }
     public String extractUsername(String token) {
         return extractAllClaims(token).getSubject();
     }

@@ -1,5 +1,6 @@
 package com.example.prescription.reminder.demo.service;
 
+import com.example.prescription.reminder.demo.configuration.CustomUser;
 import com.example.prescription.reminder.demo.dao.LoginRequest;
 import com.example.prescription.reminder.demo.dao.RegisterRequest;
 import com.example.prescription.reminder.demo.dao.UserResponse;
@@ -17,6 +18,7 @@ import org.springframework.stereotype.Service;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 public class UserService {
@@ -46,10 +48,12 @@ public class UserService {
 
     public String login(LoginRequest loginRequest){
         Authentication authenticate = this.authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(loginRequest.getUsername(), loginRequest.getPassword()));
-        if(authenticate.isAuthenticated()){
+        CustomUser userDetails = (CustomUser) authenticate.getPrincipal();
+        String userId = userDetails.getId();// 👈 You get it here
 
+        if(authenticate.isAuthenticated()){
             List<GrantedAuthority> authorities = (List<GrantedAuthority>) authenticate.getAuthorities();
-            return jwtService.generateToken(loginRequest.getUsername(),authorities);
+            return jwtService.generateToken(loginRequest.getUsername(),authorities,userDetails.getId());
         }   return  ConstantsValues.loginFailed;
     }
 

@@ -25,7 +25,7 @@ public class JwtService {
         return Keys.hmacShaKeyFor(SECRET.getBytes());
     }
 
-    public String generateToken(String username, List<GrantedAuthority> roles) {
+    public String generateToken(String username, List<GrantedAuthority> roles,String userid) {
         Date now = new Date();
         Date expiryDate = new Date(now.getTime() + 1000 * 60 * 15); // 15 minutes
 
@@ -41,6 +41,7 @@ public class JwtService {
                 .setIssuedAt(now)
                 .setExpiration(expiryDate)
                 .claim("roles", roleNames)
+                .claim("userId",userid)
                 .signWith(getSignKey(), SignatureAlgorithm.HS256)
                 .compact();
     }
