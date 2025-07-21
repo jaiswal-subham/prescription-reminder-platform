@@ -29,13 +29,14 @@ public class WebSecurityConfiguration {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
         return http.csrf(c -> c.disable())
+                .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
                 .authorizeHttpRequests(req ->
                         req
                                 .requestMatchers(ConstantsValues.loginRoute).permitAll()
                                 .requestMatchers(ConstantsValues.registerRoute).permitAll()
                                 .requestMatchers(ConstantsValues.userGenericRoute).authenticated()
                 )
-               .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
+
                 .build();
     }
 

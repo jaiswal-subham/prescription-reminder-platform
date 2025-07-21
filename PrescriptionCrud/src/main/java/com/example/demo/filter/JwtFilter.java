@@ -1,6 +1,7 @@
 package com.example.demo.filter;
 
 
+import com.example.demo.configuration.CustomUser;
 import com.example.demo.service.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -9,7 +10,6 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
@@ -40,13 +40,14 @@ public class JwtFilter extends OncePerRequestFilter {
                 String username = jwtService.extractUsername(token);
                 List<String> roles = jwtService.extractRoles(token);
                 var issuedAt = jwtService.extractIssuedAt(token);
+                var id = jwtService.extractUserId(token);
 
                 if (jwtService.isTokenStillValid(username, issuedAt)) {
                     List<SimpleGrantedAuthority> authorities = roles.stream()
                             .map(SimpleGrantedAuthority::new)
                             .collect(Collectors.toList());
 
-                    UserDetails userDetails = new User(username, "", authorities);
+                    UserDetails userDetails = new CustomUser(username, "", authorities,id);
 
                     UsernamePasswordAuthenticationToken authToken =
                             new UsernamePasswordAuthenticationToken(userDetails, null, authorities);

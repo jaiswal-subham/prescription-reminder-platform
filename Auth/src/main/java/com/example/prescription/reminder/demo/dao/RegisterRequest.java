@@ -22,4 +22,6 @@ public class RegisterRequest {
     String firstName;
 
     String lastName;
+
+    String roles;
 }

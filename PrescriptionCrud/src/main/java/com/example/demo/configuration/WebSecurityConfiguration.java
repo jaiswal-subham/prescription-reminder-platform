@@ -28,12 +28,15 @@ public class WebSecurityConfiguration {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
-        return http.csrf(c -> c.disable())
-                .authorizeHttpRequests(req ->
-                        req
-                                .requestMatchers("/prescription/health").authenticated()
-                )
+        return http
+                .csrf(c -> c.disable())
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
+                .authorizeHttpRequests(req ->
+                        req.requestMatchers("/prescription/health").hasRole("USER")
+                                .requestMatchers("/prescription/admin/health").hasRole("ADMIN")
+                                .anyRequest().authenticated()
+                )
+
                 .build();
     }
 

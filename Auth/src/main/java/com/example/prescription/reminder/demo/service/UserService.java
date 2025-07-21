@@ -59,7 +59,8 @@ public class UserService {
 
     public String register(RegisterRequest registerRequest){
         String encryptedPassword = new BCryptPasswordEncoder().encode(registerRequest.getPassword());
-       UserEntity userEntity = new UserEntity(registerRequest.getUsername(),encryptedPassword,registerRequest.getEmailId(),registerRequest.getFirstName(),registerRequest.getLastName());
+       UserEntity userEntity = new UserEntity(registerRequest.getUsername(),encryptedPassword,registerRequest.getEmailId(),registerRequest.getFirstName(),registerRequest.getLastName(),registerRequest.getRoles());
+
        try{
            this.userRepo.save(userEntity);
            return ConstantsValues.success;

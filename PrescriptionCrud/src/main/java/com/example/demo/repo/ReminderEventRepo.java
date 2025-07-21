@@ -1,0 +1,15 @@
+package com.example.demo.repo;
+
+import com.example.demo.entity.ReminderEventEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface ReminderEventRepo extends JpaRepository<ReminderEventEntity,String> {
+
+    @Override
+    List<ReminderEventEntity> findAll();
+}
+

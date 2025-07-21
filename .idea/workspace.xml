@@ -4,16 +4,63 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="257c634f-803c-44a1-9a54-6e2e20309e57" name="Changes" comment="login with redis instance for blacklisting token, Microservice architecture and added auth to a next project">
-      <change afterPath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/configuration/CustomUser.java" afterDir="false" />
+    <list default="true" id="257c634f-803c-44a1-9a54-6e2e20309e57" name="Changes" comment="Upto Saving the record in reminder service table">
+      <change afterPath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/Producer/RabbitMQProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/configuration/CustomUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/configuration/RabbitMQConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/configuration/RabbitTemplateConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/configuration/ShedLockConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/configurationData/RabbitMQConfigurationData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/dao/PrescriptionData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/dao/SavePrescriptionRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/dao/SavePrescriptionResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/entity/PrescriptionEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/entity/ReminderEventEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/repo/PrescriptionRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/repo/ReminderEventRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/schedulejobs/PublishRemindersToRabbitMQ.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/service/PrescriptionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reminder-service/src/main/java/com/reminder/service/Reminder/service/configuration/CustomUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reminder-service/src/main/java/com/reminder/service/Reminder/service/configuration/RabbitTemplateConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reminder-service/src/main/java/com/reminder/service/Reminder/service/configuration/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reminder-service/src/main/java/com/reminder/service/Reminder/service/configuration/WebSecurityConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reminder-service/src/main/java/com/reminder/service/Reminder/service/configurationData/RabbitMQConfigurationData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reminder-service/src/main/java/com/reminder/service/Reminder/service/dao/ReminderEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reminder-service/src/main/java/com/reminder/service/Reminder/service/entity/ReminderEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reminder-service/src/main/java/com/reminder/service/Reminder/service/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reminder-service/src/main/java/com/reminder/service/Reminder/service/filter/JwtFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reminder-service/src/main/java/com/reminder/service/Reminder/service/listener/RabbitMQListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reminder-service/src/main/java/com/reminder/service/Reminder/service/repo/ReminderRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reminder-service/src/main/java/com/reminder/service/Reminder/service/services/JwtService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reminder-service/src/main/java/com/reminder/service/Reminder/service/utilites/ConstantsValues.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/configuration/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/configuration/RedisConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/configuration/UserDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/configuration/UserDetail.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/configuration/WebSecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/configuration/WebSecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/dao/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/dao/LoginRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/dao/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/dao/RegisterRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/repos/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/repos/UserRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/service/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/service/JwtService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/src/main/java/com/example/prescription/reminder/demo/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/src/test/java/com/example/prescription/reminder/demo/DemoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/src/test/java/com/example/prescription/reminder/demo/DemoApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrescriptionCrud/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PrescriptionCrud/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/PrescriptionCrudApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/PrescriptionCrudApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/configuration/WebSecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/configuration/WebSecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/controller/PrescriptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/controller/PrescriptionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/filter/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/filter/JwtFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/service/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/service/JwtService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/utilities/ConstantsValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/utilities/ConstantsValues.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrescriptionCrud/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/PrescriptionCrud/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project-local-repo/com.prescription/auth-service/1.0.0/auth-service-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/project-local-repo/com.prescription/auth-service/1.0.0/auth-service-1.0.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project-local-repo/com.prescription/prescription-reminder-platform/1.0.0/prescription-reminder-platform-1.0.0.pom" beforeDir="false" afterPath="$PROJECT_DIR$/target/project-local-repo/com.prescription/prescription-reminder-platform/1.0.0/prescription-reminder-platform-1.0.0.pom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project-local-repo/com.prescription/prescription-service/0.0.1-SNAPSHOT/prescription-service-0.0.1-SNAPSHOT-consumer.pom" beforeDir="false" afterPath="$PROJECT_DIR$/target/project-local-repo/com.prescription/prescription-service/0.0.1-SNAPSHOT/prescription-service-0.0.1-SNAPSHOT-consumer.pom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project-local-repo/com.prescription/prescription-service/0.0.1-SNAPSHOT/prescription-service-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/project-local-repo/com.prescription/prescription-service/0.0.1-SNAPSHOT/prescription-service-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/project-local-repo/com.prescription/prescription-service/0.0.1-SNAPSHOT/prescription-service-0.0.1-SNAPSHOT.pom" beforeDir="false" afterPath="$PROJECT_DIR$/target/project-local-repo/com.prescription/prescription-service/0.0.1-SNAPSHOT/prescription-service-0.0.1-SNAPSHOT.pom" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,12 +113,15 @@
   "keyToString": {
     "Application.DemoApplication.executor": "Debug",
     "Application.PrescriptionCrudApplication.executor": "Debug",
+    "Application.ReminderServiceApplication.executor": "Debug",
+    "Application.com.example.demo.DemoApplication.executor": "Debug",
+    "JUnit.DemoApplicationTests.testLogin.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Library-center-app",
-    "project.structure.last.edited": "Project",
+    "last_opened_file_path": "D:/Prescription Reminders/Prescription-Reminder-Platform/email-service",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.4",
     "settings.editor.selected.configurable": "reference.settings.project.maven.importing"
@@ -105,8 +155,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DemoApplicationTests.testLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="auth-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.prescription.reminder.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.prescription.reminder.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.example.prescription.reminder.demo.DemoApplicationTests" />
+      <option name="METHOD_NAME" value="testLogin" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DemoApplicationTests.testLogin" />
         <item itemvalue="Application.DemoApplication" />
       </list>
     </recent_temporary>
@@ -128,7 +195,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751901725713</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added UserID in jwt token">
+      <option name="closed" value="true" />
+      <created>1752049053568</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1752049053568</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -144,61 +219,43 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="login with redis instance for blacklisting token, Microservice architecture and added auth to a next project" />
-    <option name="LAST_COMMIT_MESSAGE" value="login with redis instance for blacklisting token, Microservice architecture and added auth to a next project" />
+    <MESSAGE value="Added UserID in jwt token" />
+    <MESSAGE value="Upto Saving the record in reminder service table" />
+    <option name="LAST_COMMIT_MESSAGE" value="Upto Saving the record in reminder service table" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/filter/JwtFilter.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="16" />
+          <url>file://$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/configuration/ShedLockConfig.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="84" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/filter/JwtFilter.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="31" />
+          <url>file://$PROJECT_DIR$/Reminder-service/src/main/java/com/reminder/service/Reminder/service/configuration/WebSecurityConfiguration.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="86" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/filter/JwtFilter.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="32" />
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.2.4/spring-security-web-6.2.4-sources.jar!/org/springframework/security/web/authentication/UsernamePasswordAuthenticationFilter.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="128" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/filter/JwtFilter.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/filter/JwtFilter.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/filter/JwtFilter.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/filter/JwtFilter.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/service/JwtService.java</url>
-          <line>71</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/PrescriptionCrud/src/main/java/com/example/demo/service/JwtService.java</url>
-          <line>72</line>
-          <option name="timeStamp" value="38" />
+        <line-breakpoint enabled="true" type="java-method">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/6.2.4/spring-security-web-6.2.4-sources.jar!/org/springframework/security/web/authentication/UsernamePasswordAuthenticationFilter.java</url>
+          <line>66</line>
+          <properties class="org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter" method="&lt;init&gt;">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="129" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="e" />
+        <watch expression="message" />
       </configuration>
     </watches-manager>
   </component>

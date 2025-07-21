@@ -34,13 +34,16 @@ public class UserEntity {
     @Column(name = "last_name", nullable = false)
     String lastName;
 
-    public UserEntity(String username, String password,  String emailId,  String firstName, String lastName) {
+    @Column(name = "roles", nullable = false)
+    String roles;
+
+    public UserEntity(String username, String password,  String emailId,  String firstName, String lastName,String roles) {
         this.username = username;
         this.password = password;
         this.emailId = emailId;
         this.firstName = firstName;
         this.lastName = lastName;
-
+        this.roles = roles;
     }
 
     public UserEntity() {

@@ -23,7 +23,7 @@ public class AuthController {
     }
 
     @PostMapping(ConstantsValues.loginRoute)
-    ResponseEntity<LoginResponse> login(@Valid @RequestBody LoginRequest loginRequest){
+    public ResponseEntity<LoginResponse> login(@Valid @RequestBody LoginRequest loginRequest){
         String login = this.userService.login(loginRequest);
         if(login.equals(ConstantsValues.loginFailed)) return new ResponseEntity<LoginResponse>(new LoginResponse(login), HttpStatus.EXPECTATION_FAILED);
         return new ResponseEntity<LoginResponse>(new LoginResponse(login), HttpStatus.OK);
