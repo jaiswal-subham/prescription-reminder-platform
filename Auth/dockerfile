@@ -1,7 +1,7 @@
 # =========================
 # Stage 1: Build the JAR
 # =========================
-FROM maven:3.9.9-eclipse-temurin-22 AS builder
+FROM maven:3.9.9-eclipse-temurin-21 AS builder
 WORKDIR /app
 
 # Copy the entire project so Maven can access parent POM
@@ -13,7 +13,7 @@ RUN mvn -pl Auth clean package -DskipTests
 # =========================
 # Stage 2: Create minimal runtime image
 # =========================
-FROM eclipse-temurin:22-jdk-alpine
+FROM eclipse-temurin:21-jdk-alpine
 WORKDIR /app
 VOLUME /tmp
 
@@ -22,3 +22,5 @@ COPY --from=builder /app/Auth/target/*.jar app.jar
 
 # Run the service
 ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "app.jar"]
+#docker build -t subhamjaiswal79788/prescription-reminder-platform-auth-service:1.0 -f Auth/Dockerfile .
+#docker push subhamjaiswal79788/prescription-reminder-platform-auth-service:1.0
