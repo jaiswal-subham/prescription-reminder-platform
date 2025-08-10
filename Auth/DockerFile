@@ -1,0 +1,24 @@
+# =========================
+# Stage 1: Build the JAR
+# =========================
+FROM maven:3.9.9-eclipse-temurin-22 AS builder
+WORKDIR /app
+
+# Copy the entire project so Maven can access parent POM
+COPY . .
+
+# Build only the Auth service
+RUN mvn -pl Auth clean package -DskipTests
+
+# =========================
+# Stage 2: Create minimal runtime image
+# =========================
+FROM eclipse-temurin:22-jdk-alpine
+WORKDIR /app
+VOLUME /tmp
+
+# Copy the jar from builder stage
+COPY --from=builder /app/Auth/target/*.jar app.jar
+
+# Run the service
+ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "app.jar"]
