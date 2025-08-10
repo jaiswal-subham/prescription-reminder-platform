@@ -47,7 +47,13 @@ jobs:
 
       # Build Docker image from Auth/Dockerfile
       - name: Build Docker image
-        run: docker build -f Auth/Dockerfile -t subhamjaiswal79788/prescription-reminder-platform-auth-service:1.0 ./Auth
+        run: docker build -t subhamjaiswal79788/prescription-reminder-platform-auth-service:1.0 -f Auth/Dockerfile .
+
+      #docker build -t subhamjaiswal79788/prescription-reminder-platform-auth-service:1.0 -f Auth/Dockerfile .
+      #docker push subhamjaiswal79788/prescription-reminder-platform-auth-service:1.0
+
+
+
 
       # Push Docker image to Docker Hub
       - name: Push Docker image
